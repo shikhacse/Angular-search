@@ -1,0 +1,37 @@
+<div class="containe py-4 px-4">
+  <div class="row">
+     <div class="col-md-12">
+        <div> <h5>{{resultData.title}} </h5></div>
+        <div>company Number: {{resultData.company_number}}</div>
+     </div>
+     </div>
+     <div class="row mt-4">
+     <div class="col-md-12">
+        <div class="list-group" >
+             <div class="d-flex w-100 justify-content-between" >
+               <h5 class="mb-1"><h6>Registered Office address</h6></h5>
+             </div>
+              <p>{{resultData.address_snippet}}</p>
+         </div>
+         <div class="list-group" >
+          <div class="d-flex w-100 justify-content-between" >
+            <h5 class="mb-1"><h6>Company Status</h6></h5>
+          </div>
+           <p>{{resultData.company_status}}</p>
+      </div>
+      <div class="list-group" >
+        <div class="d-flex w-100 justify-content-between" >
+          <h5 class="mb-1"><h6>Company Type</h6></h5>
+        </div>
+         <p>{{resultData.company_type}}</p>
+    </div>
+    <div class="list-group" >
+      <div class="d-flex w-100 justify-content-between" >
+        <h5 class="mb-1"><h6>Incoprated On</h6></h5>
+      </div>
+       <p>{{resultData.date_of_creation | date}}</p>
+  </div>
+         <button class="btn btn-link" (click)="listOfficer(resultData.company_number)">List officers </button>
+     </div>
+  </div>
+</div>

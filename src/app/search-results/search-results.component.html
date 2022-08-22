@@ -1,0 +1,33 @@
+      <!-- <div class="container">
+        <h2>Search List</h2>
+        <br>
+        <ul class="list-group" id="myList" *ngFor="let result of paginationElements | paginate: { itemsPerPage: 6, currentPage: page }">
+          <li class="list-group-item"><button (click)="adduser(result)" >{{result.title}}</button></li>
+          <li class="list-group-item">{{result.company_number}}</li>
+          <li class="list-group-item">{{result.company_status}}</li>
+        </ul>  
+        <pagination-controls (pageChange)="page = $event"></pagination-controls>
+      </div> -->
+
+
+      <div class="containe py-4 px-4">
+        <div class="row">
+           <div class="col-md-12">
+            <h5>Search List </h5>
+           </div>
+           </div>
+           <div class="row mt-4">
+           <div class="col-md-12">
+              <div class="list-group" *ngFor="let result of paginationElements | paginate: { itemsPerPage: 6, currentPage: page }">
+                   <div class="d-flex w-100 justify-content-between" >
+                    <button class="btn btn-link" (click)="showDetail(result)" >{{result.title}}</button>
+                   </div>
+                    <p>
+                      {{result.description}} 
+                    </p>
+                    <p> {{result.address_snippet}} </p>
+               </div>
+               <pagination-controls (pageChange)="page = $event"></pagination-controls>
+           </div>
+        </div>
+     </div>

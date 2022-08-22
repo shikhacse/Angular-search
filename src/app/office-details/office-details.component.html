@@ -1,0 +1,20 @@
+<div class="containe py-4 px-4">
+   <div class="row">
+      <div class="col-md-12">
+         <div> <h5>{{officeList.compName}} - officers </h5></div>
+         <div>company Number: {{officeList.compNumb}}</div>
+      </div>
+      </div>
+      <div class="row mt-4">
+      <div class="col-md-12">
+         <div class="list-group" *ngFor="let result of officeList.result">
+              <div class="d-flex w-100 justify-content-between" >
+                <h5 class="mb-1"><h6>{{result.name}}</h6></h5>
+              </div>
+               <p>{{result.officer_role}}</p>
+          </div>
+      </div>
+   </div>
+</div>
+
+
